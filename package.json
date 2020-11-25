@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "A headless dialog/modal manager for react.",
   "source": "src/index.ts",
-  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
+  "main": "dist/dialog-manager-react.js",
+  "module": "dist/dialog-manager-react.module.js",
+  "unpkg": "dist/dialog-manager-react.umd.js",
   "files": [
     "dist",
     "src"
@@ -16,8 +16,8 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint 'src**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "eslint '{src,stories}/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '{src,stories}**/*.{js,ts,tsx}' --quiet --fix",
     "build": "microbundle -o dist/ --jsx React.createElement --compress false --sourcemap false",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -46,9 +46,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react-app": "^6.2.2",
     "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
     "microbundle": "^0.12.4",
     "prettier": "^2.2.0",
     "react": "^16.14.0",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^16.14.0",
     "ts-jest": "^26.4.4"
   },

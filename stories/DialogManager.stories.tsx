@@ -1,4 +1,4 @@
-import { DialogManager, DialogManagerProps } from '../DialogManager';
+import { DialogManager, DialogManagerProps } from '../src/DialogManager';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 

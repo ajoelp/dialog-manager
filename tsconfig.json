@@ -1,6 +1,7 @@
 {
-  "include": ["src", "types"],
+  "include": ["src", "types", "__tests__/setupTests.ts"],
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
@@ -18,5 +19,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-  }
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+  },
+  "exclude": ["node_modules", "dist", "**/*.spec.tsx?"]
 }
