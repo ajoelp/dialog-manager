@@ -1,1 +1,1 @@
-export { DialogManager as default, DialogManagerProps } from './DialogManager'
+export { DialogManager as default, DialogManagerProps } from './DialogManager';
