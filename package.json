@@ -1,12 +1,12 @@
 {
-  "name": "react-dialog-manager",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@dialog-manager/react",
+  "version": "0.0.1",
+  "description": "A headless dialog/modal manager for react.",
   "source": "src/index.ts",
-  "main": "dist/react-dialog-manager.js",
+  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/react-dialog-manager.module.js",
-  "unpkg": "dist/react-dialog-manager.umd.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "files": [
     "dist",
     "src"
