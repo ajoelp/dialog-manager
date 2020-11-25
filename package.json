@@ -2,11 +2,15 @@
   "name": "react-dialog-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/react-dialog-manager.js",
+  "module": "dist/react-dialog-manager.module.js",
+  "unpkg": "dist/react-dialog-manager.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint 'src**/*.{js,ts,tsx}' --quiet --fix"
+    "lint:fix": "eslint 'src**/*.{js,ts,tsx}' --quiet --fix",
+    "build": "microbundle -o dist/ --jsx React.createElement --compress false --sourcemap false"
   },
   "author": "Joel Podrebarac",
   "license": "ISC",
@@ -21,8 +25,9 @@
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "microbundle": "^0.12.4",
     "prettier": "^2.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
