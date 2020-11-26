@@ -19,7 +19,7 @@
     "lint": "eslint '{src,stories}/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '{src,stories}**/*.{js,ts,tsx}' --quiet --fix",
     "build": "microbundle -o dist/ --name DialogManager --jsx React.createElement --compress false --sourcemap false",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6066",
     "build-storybook": "build-storybook"
   },
   "author": "Joel Podrebarac",
