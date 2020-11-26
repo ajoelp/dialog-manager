@@ -1,6 +1,6 @@
 {
   "name": "@ajoelp/dialog-manager-react",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A headless dialog/modal manager for react.",
   "source": "src/index.ts",
   "typings": "dist/index.d.ts",
