@@ -12,6 +12,10 @@ npm install dialog-manager-react
 
 ## Usage
 
+Checkout the demo
+
+[![Edit solitary-wildflower-rqyxp](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/solitary-wildflower-rqyxp?fontsize=14&hidenavigation=1&theme=dark)
+
 Create a file in your project for defining your dialogs
 
 `DialogManager.tsx`
