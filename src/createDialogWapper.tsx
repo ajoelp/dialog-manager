@@ -40,7 +40,7 @@ export function createDialogWrapper<DialogsObject extends object>(
     return context;
   }
 
-  function DialogManager(props: { children: ReactNode }) {
+  function DialogManager(props: { children?: ReactNode }) {
     const [dialog, setDialog] = useState<DialogKeys | undefined>();
     const [active, setDialogActive] = useState<DialogKeys | undefined>();
     const [dialogProps, setDialogProps] = useState<any>({});

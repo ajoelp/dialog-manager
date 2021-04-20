@@ -1,8 +1,37 @@
-coverage
-fixtures
-src
-.*
-*.log
-docs/
+# Next.js
+.next/
+node_modules/
+.storybook
+
+
+# Parcel
+.cache/
+
+# Example
+example/
+
+# package
+*.tgz
+
+# yarn
+yarn.lock
+package-lock.json
+
+# VSCode
+.vscode/
+
+# Test
+__test__/
 jest.config.js
-__tests__
+coverage/
+**/*.spec.ts?x
+**/*.stories.ts?x
+
+# microbundle
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Github
+.github/
+.git/
