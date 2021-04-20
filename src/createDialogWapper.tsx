@@ -1,4 +1,4 @@
-import React, { ComponentType, Component, createContext, ReactNode, useState, useContext } from 'react';
+import React, { ComponentType, Component, createContext, ReactNode, useState, useContext, Suspense } from 'react';
 import { Portal } from './components/Portal';
 
 type GetComponentProps<T> = T extends ComponentType<infer P> | Component<infer P> ? P : never;
@@ -10,13 +10,14 @@ export type DialogProps = {
 
 type DialogWrapperOptions = {
   showTimeout?: number;
+  suspenseFallback?: ReactNode;
 };
 
 export function createDialogWrapper<DialogsObject extends object>(
   dialogs: DialogsObject,
   options: DialogWrapperOptions = {},
 ) {
-  const { showTimeout = 200 } = options;
+  const { showTimeout = 200, suspenseFallback = null } = options;
 
   type ComponentProps<Component> = Omit<GetComponentProps<Component>, 'closeDialog' | 'active'>;
   type DialogKeys = keyof typeof dialogs;
@@ -74,9 +75,11 @@ export function createDialogWrapper<DialogsObject extends object>(
       <DialogManagerContext.Provider value={providerValue}>
         {props.children}
         {Dialog != null && (
-          <Portal>
-            <Dialog {...{ closeDialog, active: active === dialog, ...dialogProps }} />
-          </Portal>
+          <Suspense fallback={suspenseFallback}>
+            <Portal>
+              <Dialog {...{ closeDialog, active: active === dialog, ...dialogProps }} />
+            </Portal>
+          </Suspense>
         )}
       </DialogManagerContext.Provider>
     );

@@ -111,6 +111,7 @@ const Dialogs = {
 | key        | default           | Description  | Type |
 | ------------- |:-------------:| :-----:| :-----:|
 | `showTimeout`      | `200` | Timeout between when the closeModal is called and the modal is removed from the dom | `number`
+| `suspenseFallback`      | `null` | Fallback loading state for lazy loaded components | `ReactNode`
 
 
 ## `useDialog()`
