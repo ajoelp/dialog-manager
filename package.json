@@ -25,7 +25,24 @@
     "regex": "^_"
   },
   "author": "Joel Podrebarac",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajoelp/dialog-manager"
+  },
+  "bugs": {
+    "url": "https://github.com/ajoelp/dialog-manager/issues"
+  },
+  "homepage": "https://github.com/ajoelp/dialog-manager#readme",
+  "keywords": [
+    "react",
+    "dialogs",
+    "modals",
+    "animation",
+    "manager",
+    "factory",
+    "hook"
+  ],
   "peerDependencies": {
     "react": ">=16.4.0",
     "react-dom": ">=16.4.0"
