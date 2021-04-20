@@ -21,10 +21,14 @@
     "storybook": "start-storybook -p 6066",
     "build-storybook": "build-storybook"
   },
+  "mangle": {
+    "regex": "^_"
+  },
   "author": "Joel Podrebarac",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^16.4.0"
+    "react": ">=16.4.0",
+    "react-dom": ">=16.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
