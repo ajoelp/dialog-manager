@@ -1,4 +1,8 @@
-# Dialog Manager
+# Dialog Manager React
+[![Test](https://github.com/ajoelp/dialog-manager/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ajoelp/dialog-manager/actions/workflows/test.yml)
+[![npm version](https://badge.fury.io/js/dialog-manager-react.svg)](https://badge.fury.io/js/dialog-manager-react)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 
 ## Install
 
