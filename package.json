@@ -29,10 +29,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@storybook/addon-actions": "^6.1.6",
-    "@storybook/addon-essentials": "^6.1.6",
-    "@storybook/addon-links": "^6.1.6",
-    "@storybook/react": "^6.1.6",
+    "@headlessui/react": "^1.0.0",
+    "@storybook/addon-actions": "^6.2.8",
+    "@storybook/addon-essentials": "^6.2.8",
+    "@storybook/addon-links": "^6.2.8",
+    "@storybook/react": "^6.2.8",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.15",
@@ -54,6 +55,5 @@
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^16.14.0",
     "ts-jest": "^26.4.4"
-  },
-  "dependencies": {}
+  }
 }
