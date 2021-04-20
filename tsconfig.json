@@ -1,13 +1,10 @@
 {
-  "include": ["src", "types", "__tests__/setupTests.ts"],
   "compilerOptions": {
-    "baseUrl": ".",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "rootDir": "./src",
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -19,9 +16,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "paths": {
-      "@src/*": ["src/*"]
-    },
   },
-  "exclude": ["node_modules", "dist", "**/*.spec.tsx?"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "__tests__/**/*", "stories/**/*"],
+  "files": ["src/index.ts"]
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import { createDialogWrapper } from './createDialogWapper';
+import { createDialogWrapper } from '../src/createDialogWapper';
 import { screen, render, act } from '@testing-library/react';
 
-jest.mock('./components/Portal', () => ({
+jest.mock('../src/components/Portal', () => ({
   Portal: ({ children }: any) => <>{children}</>,
 }));
 

@@ -2,7 +2,7 @@
 .next/
 node_modules/
 .storybook
-
+.idea
 
 # Parcel
 .cache/
@@ -35,3 +35,5 @@ coverage/
 # Github
 .github/
 .git/
+
+setupTests.ts

@@ -1,6 +1,6 @@
 import React, { FC, Fragment } from 'react';
 import { Meta } from '@storybook/react';
-import { createDialogWrapper, DialogProps } from './createDialogWapper';
+import { createDialogWrapper, DialogProps } from '../src/createDialogWapper';
 import { Dialog as Modal, Transition } from '@headlessui/react';
 
 type SampleDialogProps = {

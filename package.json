@@ -8,17 +8,16 @@
   "module": "dist/dialog-manager-react.module.js",
   "unpkg": "dist/dialog-manager-react.umd.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint '{src,stories}/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint '{src,stories}**/*.{js,ts,tsx}' --quiet --fix",
-    "build": "microbundle -o dist/ --name DialogManager --jsx React.createElement --compress false --sourcemap false",
+    "lint": "eslint '{src,stories,__tests__}/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '{src,stories,__tests__}**/*.{js,ts,tsx}' --quiet --fix",
+    "build": "microbundle -o dist/ --name DialogManager --jsx React.createElement --external react --define process.env.NODE_ENV=production",
     "storybook": "start-storybook -p 6066",
     "build-storybook": "build-storybook"
   },
