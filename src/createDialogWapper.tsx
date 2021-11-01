@@ -1,4 +1,13 @@
-import React, { ComponentType, Component, createContext, ReactNode, useState, useContext, Suspense } from 'react';
+import React, {
+  Component,
+  ComponentType,
+  createContext,
+  ReactNode,
+  Suspense,
+  useCallback,
+  useContext,
+  useState,
+} from 'react';
 import { Portal } from './components/Portal';
 
 type GetComponentProps<T> = T extends ComponentType<infer P> | Component<infer P> ? P : never;
@@ -46,22 +55,25 @@ export function createDialogWrapper<DialogsObject extends object>(
     const [active, setDialogActive] = useState<DialogKeys | undefined>();
     const [dialogProps, setDialogProps] = useState<any>({});
 
-    function openDialog<Type extends DialogKeys>(name: Type, props?: ComponentProps<DialogsObject[Type]>) {
-      if (props != null) {
-        setDialogProps(props);
-      }
-      setDialog(name);
-      setTimeout(() => {
-        setDialogActive(name);
-      }, showTimeout);
-    }
+    const openDialog = useCallback(
+      <Type extends DialogKeys>(name: Type, props?: ComponentProps<DialogsObject[Type]>) => {
+        if (props != null) {
+          setDialogProps(props);
+        }
+        setDialog(name);
+        setTimeout(() => {
+          setDialogActive(name);
+        }, showTimeout);
+      },
+      [setDialogProps, setDialogActive],
+    );
 
-    function closeDialog() {
+    const closeDialog = useCallback(() => {
       setDialogActive(undefined);
       setTimeout(() => {
         setDialog(undefined);
       }, showTimeout);
-    }
+    }, [setDialogActive, setDialog]);
 
     const providerValue = {
       openDialog,
