@@ -1,6 +1,6 @@
 {
   "name": "dialog-manager-react",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A headless dialog/modal manager for react.",
   "source": "src/index.ts",
   "typings": "dist/index.d.ts",
